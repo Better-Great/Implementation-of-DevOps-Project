@@ -92,5 +92,7 @@ jobs:
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
