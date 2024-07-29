@@ -79,7 +79,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN }}
 
     - name: Update tag in Helm chart
       run: |
@@ -93,6 +93,6 @@ jobs:
         git commit -m "Update tag in Helm chart"
         git push
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 
